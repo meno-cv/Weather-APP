@@ -82,6 +82,27 @@ function btnSearchOnAction() {
         });
 }
 
+// Load default weather
+function loadDefaultWeather() {
+
+    fetch(`${baseUrl}/current.json?key=${apiKey}&q=Panadura`)
+        .then(res => res.json())
+        .then(data => {
+
+            console.log(data);
+
+            if (!data.error) {
+                displayWeather(data);
+            }
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
+
+loadDefaultWeather();
+
 
 
 
