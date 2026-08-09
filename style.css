@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Segoe UI", Arial, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -20,12 +20,12 @@ body{
     padding: 20px;
 }
 
-/* weather card */
+/* Weather card */
 .weather-card {
     max-width: 450px;
     margin: auto;
     padding: 40px;
-  
+
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -47,4 +47,33 @@ body{
     color: rgba(255, 255, 255, 0.65);
     margin-bottom: 30px;
     font-size: 15px;
+}
+
+/* Search Box  */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 13px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-box input:focus {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.12);
 }
