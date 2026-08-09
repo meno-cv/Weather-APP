@@ -5,13 +5,13 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #bfd9ef, #00f2fe);
-    color: #222;
+    background: radial-gradient(circle at 15% 20%, rgba(0, 212, 255, 0.35), transparent 30%), radial-gradient(circle at 85% 80%, rgba(120, 80, 255, 0.35), transparent 30%), linear-gradient(135deg, #07111f, #102a43, #07111f);
+    color: white;
 }
 
 /* Main container */
@@ -20,24 +20,31 @@ body{
     padding: 20px;
 }
 
-/* Weather Card */
+/* weather card */
 .weather-card {
     max-width: 450px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 35px;
-    border-radius: 20px;
+    padding: 40px;
+  
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* H1 */
 .weather-card h1 {
-    font-size: 32px;
+    font-size: 34px;
+    font-weight: 600;
     margin-bottom: 8px;
+    letter-spacing: -1px;
 }
 
 .subtitle {
-    color: #777;
-    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 30px;
+    font-size: 15px;
 }
