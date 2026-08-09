@@ -33,6 +33,58 @@ function displayWeather(data) { // Display weather info
     `;
 }
 
+// Search weather
+function btnSearchOnAction() {
+
+    let city = document.getElementById("txtSearch").value;
+
+    if (city.trim() === "") {
+        document.getElementById("contentSection").innerHTML = `
+            <p class="error">
+                Please enter a city name.
+            </p>
+        `;
+        return;
+    }
+
+    document.getElementById("contentSection").innerHTML = `
+        <p class="loading">Searching...</p>
+    `;
+
+    fetch(`${baseUrl}/current.json?key=${apiKey}&q=${city}`)
+        .then(res => res.json())
+        .then(data => {
+
+            console.log(data);
+
+            if (data.error) {
+                document.getElementById("contentSection").innerHTML = `
+                    <p class="error">
+                        ${data.error.message}
+                    </p>
+                `;
+                return;
+            }
+
+            displayWeather(data);
+
+        })
+        .catch(error => {
+
+            console.error(error);
+
+            document.getElementById("contentSection").innerHTML = `
+                <p class="error">
+                    Something went wrong. Please try again.
+                </p>
+            `;
+
+        });
+}
+
+
+
+
 
 
 
