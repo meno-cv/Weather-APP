@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <main class="weather-container">
+
+        <div class="weather-card">
+
+            <h1>Weather App</h1>
+            <p class="subtitle">Check the current weather anywhere</p>
+
+            <div class="search-box">
+                <input type="text" id="txtSearch" placeholder="Enter a city...">
+
+                <button onclick="btnSearchOnAction()">
+                    Search
+                </button>
+            </div>
+
+            <section id="contentSection">
+                <p class="loading">Loading weather...</p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+
 </body>
 </html>
