@@ -139,3 +139,28 @@ body {
 .loading {
     color: rgba(255, 255, 255, 0.6);
 }
+
+/* Error */
+.error {
+    color: #ff8a8a;
+    font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .weather-card {
+        padding: 30px 22px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .temperature {
+        font-size: 55px;
+    }
+}
