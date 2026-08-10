@@ -95,3 +95,27 @@ body {
     background: white;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
+/* Weather Information */
+.weather-info {
+    padding-top: 10px;
+}
+
+.weather-icon {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+}
+
+.weather-info h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.country {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 5px;
+    font-size: 14px;
+}
